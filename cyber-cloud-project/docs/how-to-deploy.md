@@ -9,7 +9,7 @@ Unfortnately, it's a manual process at the moment...
 * Ensure none of your changes have broken the site and push your changes to the github repository.
 * Next SSH into the logging node and go to the `/home/cyber-cloud-project-documentation` directory and remove `/build` folder. This ensures we don't have any old files left over when we copy over the new build folder.
 * Go to your VS Code terminal and run `npm run build` *(this will create a build folder)*
-* Scp the `/build` folder to the logging node. `scp -P 2212 -r ..build/ root@10.40.216.102:/home/cyber-cloud-project-documentation/build`
+* Scp the `/build` folder to the logging node. `scp -P 2212 -r build/ root@10.40.216.102:/home/cyber-cloud-project-documentation/build`
 
 **Note: If any changes were made to the `docker-compose.yml` file or `dockerfile` make sure to scp those over as well.**
 
