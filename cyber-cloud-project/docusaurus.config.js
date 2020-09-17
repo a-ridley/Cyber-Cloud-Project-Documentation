@@ -1,18 +1,18 @@
 module.exports = {
-  title: 'My Site',
+  title: 'Cyber Cloud Project',
   tagline: 'The tagline of my site',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'USD Cyber Security', // Usually your GitHub org/user name.
+  projectName: 'cyber-cloud-project-documentation', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'My Site',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/CCET-mark-2c .png',
       },
       items: [
         {
