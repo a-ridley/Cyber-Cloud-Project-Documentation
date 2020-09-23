@@ -15,6 +15,7 @@ While executing the playbook, don't forget to backup all the original files and 
 
 # Playbook
 ## Packages
+```
 yum update -y && yum upgrade -y
 yum install centos-release-openstack-train -y
 yum install python-openstackclient -y
@@ -24,11 +25,15 @@ yum install openstack-neutron-linuxbridge -y
 yum install ebtables -y 
 yum install ipset -y
 yum install chrony -y
+```
 ## Firewall
+```
 sudo firewall-cmd --permanent --add-service=ntp
 sudo firewall-cmd --reload
+```
 ## Environment
 ### sudo vi /etc/hosts
+```
 10.10.10.11  compute1.usdcyber.edu    compute1
 10.10.10.12  logging.usdcyber.edu     logging
 10.10.10.13  object1.usdcyber.edu     object1
@@ -36,13 +41,14 @@ sudo firewall-cmd --reload
 10.10.10.16  compute4.usdcyber.edu    compute4
 10.10.10.17  compute3.usdcyber.edu    compute3
 10.10.10.18  controller.usdcyber.edu  controller
-10.10.10.19  network1.usdcyber.edu    network1
-10.10.10.26  compute4.usdcyber.edu compute4
-
+10.10.10.19  compute5.usdcyber.edu    compute5
+10.10.10.26  compute4.usdcyber.edu    compute4
+```
 ### vi /etc/chrony.conf
+```
 server controller iburst
 systemctl restart chronyd
-
+```
 ## Nova
 ### openstack
 #### vi /etc/nova/nova.conf
