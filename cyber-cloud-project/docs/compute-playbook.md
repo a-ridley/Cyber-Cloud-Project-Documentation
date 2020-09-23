@@ -192,8 +192,38 @@ sysctl net.bridge.bridge-nf-call-ip6tables
 systemctl restart openstack-nova-compute.service
 sudo systemctl enable neutron-linuxbridge-agent.service
 sudo systemctl start neutron-linuxbridge-agent.service
+## Add the startup scripts
+### vi /root/startup.sh
+```
+#!/bin/bash
 
-### RUN ON CONTROLLER NODE TO DISCOVER NEW HOSTS:
+iptables -D INPUT -j REJECT --reject-with icmp-host-prohibited
+iptables -D FORWARD -j REJECT --reject-with icmp-host-prohibited
+iptables -A POSTROUTING -t mangle -p udp --dport 68 -j CHECKSUM --checksum-fill
+service iptables save
+```
+
+### vi /etc/systemd/system/run-startup.service
+```
+[Unit]
+After=network.service
+
+[Service]
+ExecStart=/root/startup.sh
+
+[Install]
+WantedBy=default.target
+```
+### enable the service
+```
+chmod +x /root/startup.sh
+chmod 755 /root/startup.sh
+chmod 664 /etc/systemd/system/run-startup.service
+
+systemctl daemon-reload
+systemctl enable run-startup.service
+```
+## RUN ON CONTROLLER NODE TO DISCOVER NEW HOSTS:
 openstack compute service list --service nova-compute
 su -s /bin/sh -c "nova-manage cell_v2 discover_hosts --verbose" nova
 openstack compute service list --service nova-compute
