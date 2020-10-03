@@ -46,7 +46,7 @@ enabled_backends = lvm
 glance_api_servers = http://controller:9292
 
 [database]
-connection = mysql+pymysql://cinder:8274365e0ed8c339f18f8508cbc543@controller/cinder
+connection = mysql+pymysql://cinder:<CINDER_PASWORD>@controller/cinder
 
 [keystone_authtoken]
 www_authenticate_uri = http://controller:5000
@@ -57,7 +57,7 @@ project_domain_name = default
 user_domain_name = default
 project_name = service
 username = cinder
-password = 8274365e0ed8c339f18f8508cbc543
+password = <CINDER_PASWORD>
 
 [lvm]
 volume_driver = cinder.volume.drivers.lvm.LVMVolumeDriver
