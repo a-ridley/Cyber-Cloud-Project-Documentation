@@ -21,14 +21,14 @@ scp -P 2212 -r build/ root@10.40.216.102:/home/cyber-cloud-project-documentation
 scp -P 2212 docker-compose.yml root@10.40.216.102:/home/cyber-cloud-project-documentation
 ```
 
-## Starting/Stopping the Docker Container 
-After the files have been copied over to the logging node you will need to stop the docker container and then start it up again.
+## Budiling the new docker image/Stopping the Docker Container 
+After the files have been copied over to the logging node you will need to stop the docker container. Then you will build the new image and start it up again.
 Ensure you are in the directory that has the docker-compose.yml file: 
 
 `/home/cyber-cloud-project-documentation` before running any of the following commands.
 
 
 In order to stop the docker container run the following command `docker-compose down` on the logging node. 
-Then run `docker-compose up -d` to start it back up.
+Then run `docker-compose up --build -d` to build the new image and start it back up.
 
 
