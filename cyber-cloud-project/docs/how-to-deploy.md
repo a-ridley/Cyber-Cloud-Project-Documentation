@@ -17,6 +17,10 @@ scp -P 2212 -r build/ root@10.40.216.102:/home/cyber-cloud-project-documentation
 
 **Note: If any changes were made to the `docker-compose.yml` file or `dockerfile` make sure to scp those over as well.**
 
+```bash
+scp -P 2212 docker-compose.yml root@10.40.216.102:/home/cyber-cloud-project-documentation
+```
+
 ## Starting/Stopping the Docker Container 
 After the files have been copied over to the logging node you will need to stop the docker container and then start it up again.
 Ensure you are in the directory that has the docker-compose.yml file: 
