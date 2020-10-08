@@ -1,3 +1,9 @@
+---
+id: bug-not-receiving-dhcp
+title: Instance Cannot Access Console on Horizon
+---
+
+
 # Symptoms:
 - my instance is not receiving an IP from DHCP.
 - my instance cannot access the console on OpenStack horizon dashboard.

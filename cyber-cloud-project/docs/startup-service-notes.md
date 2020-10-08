@@ -1,3 +1,9 @@
+---
+id: startup-service-notes
+title: Run on Startup
+---
+
+
 # /root/startup.sh
 This file is run on startup, there is a custom systemd function that is scheduled to run on boot. Add any scripts or rules here.
 

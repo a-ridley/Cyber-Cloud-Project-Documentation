@@ -1,3 +1,8 @@
+---
+id: bug-could-not-kvm
+title: KVM Issues
+---
+
 # Symptoms:
 - unable to provision vms on this host.
 - unable to migrate vms to this host.

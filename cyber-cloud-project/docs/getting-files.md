@@ -1,3 +1,9 @@
+---
+id: getting-files
+title: Get Files
+---
+
+
 # wget smol file from google: 
 ```
 // https://silicondales.com/tutorials/g-suite/how-to-wget-files-from-google-drive/

@@ -1,4 +1,8 @@
-# The active maintenance script 
+---
+id: active-maintenance-script
+title: The Active Maintenance Script
+---
+
 Run it to prevent students from attempting to logging on.
 
 /root/active-maintenance-toggle.sh ['on' | 'off']

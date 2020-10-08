@@ -1,3 +1,9 @@
+---
+id: dashboard-maintenance
+title: Dashboard Maintenance
+---
+
+
 # Paths to make modifications to html
 1. static resources go in => `/usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/`
 2. changes to html go in => `/usr/share/openstack-dashboard/openstack_dashboard/templates/`

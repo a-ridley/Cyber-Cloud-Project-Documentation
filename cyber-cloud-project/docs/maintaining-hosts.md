@@ -1,8 +1,12 @@
+---
+id: maintaining-hosts
+title: Maintenance For Hosts
+---
 
 # Deleting hosts:
 1. you might need to do this because a host exploded and you are rebuilding it, because it's the same host we need to remove any old provider ip's that point to the old host.
 ## Basic Guide w/ Curl:
-1.  to find out how to replace <placement-endpoint-address>
+1.  to find out how to replace &ltplacement-endpoint-address&gt
 ```
 openstack catalog list
 ```
@@ -13,7 +17,7 @@ openstack token issue -f value -c id
 ```
 curl -i -X GET <placement-endpoint-address>/resource_providers?name=<target-compute-host-name> -H 'content-type: application/json' -H 'X-Auth-Token: <token>'
 ```
-curl -i -X GET http://controller:8778/resource_providers -H 'content-type: application/json' -H 'X-Auth-Token:<token>'
+curl -i -X GET http://controller:8778/resource_providers -H 'content-type: application/json' -H 'X-Auth-Token: &lttoken&gt
 ```
 curl -i -X DELETE http://controller:8778/resource_providers/<provider_token> -H \
 'content-type: application/json' -H 'X-Auth-Token: <token>'

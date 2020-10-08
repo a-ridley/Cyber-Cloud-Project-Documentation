@@ -1,3 +1,8 @@
+---
+id: bug-cannot-delete-network
+title: Cannot Delete Network
+---
+
 # Symptoms
 - unable to delete a network because something is still attached.
 # Diagnosis:

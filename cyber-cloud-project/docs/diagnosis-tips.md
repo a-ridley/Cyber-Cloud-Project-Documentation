@@ -1,4 +1,8 @@
-# Diagnosing
+---
+id: diagnosis-tips
+title: Diagnosis Tips
+---
+
 ## Instances
 1. openstack server show <instance_name>
 2. openstack server list
@@ -40,6 +44,8 @@ tail /var/log/nova/nova-scheduler.log -n 100 | grep -E -C 5 '(ERROR|error)'
 #### Command Line Verification
 1. `openstack compute service list`
 2. `openstack compute service list --service nova-compute`
+
+
 #### Discovering new compute hosts
 0. This has been automated, but this command can be used to identify new hosts.
 1. `su -s /bin/sh -c "nova-manage cell_v2 discover_hosts --verbose" nova`
@@ -47,8 +53,8 @@ tail /var/log/nova/nova-scheduler.log -n 100 | grep -E -C 5 '(ERROR|error)'
 #### Logs
 #### Services
 ##### Status
-sudo systemctl <action> libvirtd.service 
-sudo systemctl <action> openstack-nova-compute.service
+sudo systemctl &ltaction&gt libvirtd.service
+sudo systemctl &ltaction&gt openstack-nova-compute.service
 ## Neutron
 ### ip netns
 ```

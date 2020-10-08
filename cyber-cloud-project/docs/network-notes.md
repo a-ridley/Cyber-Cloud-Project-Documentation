@@ -1,2 +1,7 @@
+---
+id: network-notes
+title: Network Notes
+---
+
 1. **Provider Network**: The network and the interfaces related to granting internal vm's internet access. This network starts with 192.168.128.X
 1. **Management Network**: the network and interfaces related to providing internal communication between nodes for opentack services, this network starts with 10.10.10.X

@@ -1,3 +1,8 @@
+---
+id: deploy-from-snapshot
+title: Deploy From Snapshot
+---
+
 # Deploying from a snapshot:
 Deploying from a snapshot is simple with openstack.
 ## Creating the snapshot

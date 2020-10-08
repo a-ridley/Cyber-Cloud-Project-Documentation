@@ -2,6 +2,7 @@
 id: instance-maintenance
 title: Maintenance for Instances
 ---
+
 # Notes:
 everytime you see `. admin.sh`|`. demo.sh` this means we are sourcing the admin/demo credentials, the openstack CLI tool uses environment variables to authenticate and process requests.
 # Creating a provider network:

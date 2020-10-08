@@ -1,3 +1,8 @@
+---
+id: bug-too-many-connections
+title: Too Many Connections
+---
+
 # Report:
 - Errors are reported all over the horizon dashboard or in the logs in other files.
 - TODO: add screenshots/bug report images.
