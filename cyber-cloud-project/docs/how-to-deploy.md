@@ -5,11 +5,12 @@ title: How to Deploy the Documentation Site
 
 Unfortunately, it's a manual process at the moment...
 
-1. Make any of your changes locally using a handy-dandy IDE (VSCode)
-2. Ensure none of your changes have broken the site and push your changes to the github repository.
-3. Next, SSH into the logging node and go to the `/home/cyber-cloud-project-documentation` directory and remove `/build` folder. This ensures we don't have any old files left over when we copy over the new build folder.
-4. Go to your VS Code terminal and run `npm run build` *(this will create a build folder in your working directory)*
-5. Scp the `/build` folder to the logging node:
+1. Make any of your changes locally using an IDE (VSCode). See your changes by running `npm run start` on the vs-code terminal. A web browser should automatically open saying `localhost:port#`
+2. Ensure none of your changes have broken the site by running `npm run start,` and ensure it compiles successfully and you can see you changes on the site.
+3. Next push your changes to the github repository.
+4. Next, SSH into the logging node and go to the `/home/cyber-cloud-project-documentation` directory and remove `/build` folder. This ensures we don't have any old files left over when we copy over the new build folder.
+5. Go to your VS Code terminal and run `npm run build` *(this will create a build folder in your working directory)*
+6. Scp the `/build` folder to the logging node:
 
 ```bash
 scp -P 2212 -r build/ root@10.40.216.102:/home/cyber-cloud-project-documentation/build

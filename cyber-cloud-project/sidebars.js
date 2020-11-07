@@ -25,6 +25,7 @@ module.exports = {
     ],
     'How-To': ['deploy-from-snapshot', 'qcow2-techniques', 'getting-files'],
     'Metadata Server': ['metadata-server'],
+    'Backup': ['backup'],
     Features: ['mdx'],
   },
 };
