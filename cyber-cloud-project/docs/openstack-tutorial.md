@@ -1,3 +1,9 @@
+---
+id: openstack-tutorial
+title: Openstack Tutorial
+slug: /
+---
+
 Your account for OpenStack is ready!
 
 Once you are connected to the VPN visit the cloud here: http://10.40.216.102:5000/dashboard/
@@ -26,4 +32,4 @@ When you complete the instance the dialog box will close and a new vm will appea
 
 Once your image is done building you can click on the instance name. Select the console tab to view your VM. You can connect to your server using "root/root" for centos, ubuntu.
 
-Email at mcampos@sandiego.edu for more help.
+Email at mcampos@sandiego.edu or abigailcastro@sandiego.edu for more help.
