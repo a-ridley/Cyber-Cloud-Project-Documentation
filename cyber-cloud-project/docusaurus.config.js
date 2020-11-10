@@ -1,18 +1,18 @@
 module.exports = {
-  title: 'Cyber Cloud Project',
-  tagline: 'The tagline of my site',
+  title: 'Openstack Cyber Cloud Project',
+  tagline: '',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/school-of-engineering-blue-horizon.svg',
   organizationName: 'USD Cyber Security', // Usually your GitHub org/user name.
   projectName: 'cyber-cloud-project-documentation', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Cyber Cloud Project Documentation',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/CCET-mark-2c .png',
+        src: 'img/CCET-mark-2c.png',
       },
       items: [
         {
@@ -23,7 +23,7 @@ module.exports = {
         },
         {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/a-ridley/Cyber-Cloud-Project-Documentation',
           label: 'GitHub',
           position: 'right',
         },
@@ -36,29 +36,29 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Style Guide',
+              label: 'Openstack Tutorial',
               to: 'docs/',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/oslo-policy/',
+              label: 'Openstack Classroom Builder Tutorial',
+              to: 'docs/creating-your-classroom',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Resources',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Openstack Train Release',
+              href: 'https://www.openstack.org/software/train/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Openstack API Documentation',
+              href: 'https://docs.openstack.org/api-ref/identity/v3/',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Ask Openstack',
+              href: 'https://ask.openstack.org/en/questions/',
             },
           ],
         },
@@ -71,12 +71,12 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/a-ridley/Cyber-Cloud-Project-Documentation',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} CCP, Inc. Built with Docusaurus.`,
     },
   },
   presets: [
