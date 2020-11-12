@@ -64,6 +64,8 @@ block_device_creation_timeout = 300
 instances_path=$state_path/instances
 networks_path=$state_path/networks
 state_path=/home/nova
+vif_plugging_is_fatal=false
+vif_plugging_timeout=0
 
 [libvrt]
 nfs_mount_point_base=$state_path/mnt
