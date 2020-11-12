@@ -23,3 +23,9 @@ openstack aggregate set --zone win windows
 openstack aggregate add host windows compute3.usdcyber.edu
 openstack aggregate add host windows compute5
 ```
+
+Remove Host:
+```
+openstack aggregate remove host windows compute5
+
+```
