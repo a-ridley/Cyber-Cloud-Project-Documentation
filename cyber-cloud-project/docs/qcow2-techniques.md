@@ -6,6 +6,9 @@ title: Convert Images to QCOW2
 
 # converting images to qcow2
 ```
+# if your images are in ova format, first extract them:
+tar -xvf librenms-centos-7.6-x86_64.ova
+
 qemu-img convert -p -O qcow2 Kali-Linux-2016.1-vm-amd64/Kali-Linux-2016.1-vm-amd64-s00*.vmdk kali-for-stack.qcow2
 
 scp -p kali-rolling.qcow2 root@192.168.128.18:/home/temp/kali-rolling.qcow2
