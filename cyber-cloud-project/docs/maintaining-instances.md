@@ -105,3 +105,4 @@ openstack console url show provider-instance
 ```
 openstack server create --flavor m1.nano --image cirros --nic net-id=6884f821-c6c0-42db-ba13-242636910741 --security-group default --key-name mykey selfservice-instance
 ```
+# Migrating an instance to another host:

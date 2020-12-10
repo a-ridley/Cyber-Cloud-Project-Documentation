@@ -41,11 +41,16 @@ WARN: /etc/rc3.d/S40-network failed
 ```
 INPUT -j REJECT --reject-with icmp-host-prohibited
 -A FORWARD -j REJECT --reject-with icmp-host-prohibited
+-A FORWARD -o virbr0 -j REJECT --reject-with icmp-port-unreachable
+-A FORWARD -i virbr0 -j REJECT --reject-with icmp-port-unreachable
+
 ```
 3. we have to remove them:
 ```
 iptables -D INPUT -j REJECT --reject-with icmp-host-prohibited
 iptables -D FORWARD -j REJECT --reject-with icmp-host-prohibited
+iptables -D FORWARD -o virbr0 -j REJECT --reject-with icmp-port-unreachable
+iptables -D FORWARD -i virbr0 -j REJECT --reject-with icmp-port-unreachable
 iptables -A POSTROUTING -t mangle -p udp --dport 68 -j CHECKSUM --checksum-fill
 service iptables save
 ```
