@@ -1,0 +1,7 @@
+[vnc]
+enabled = true
+server_listen = $my_ip
+server_proxyclient_address = $my_ip
+novncproxy_base_url=http://192.168.128.18:6080/vnc_auto.html
+novncproxy_port=6080
+novncproxy_host=0.0.0.0
