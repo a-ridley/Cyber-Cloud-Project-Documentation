@@ -38,8 +38,7 @@ PLACEMENT_ENDPOINT=http://controller:8778
 ```  
 #### get a new token
 ```
-openstack token issue -f value -c id
-TOKEN=<TOKEN>
+TOKEN=$(openstack token issue -f value -c id)
 ```
 #### list resource providers
 ```
