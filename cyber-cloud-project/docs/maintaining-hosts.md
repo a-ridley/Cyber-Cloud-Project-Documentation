@@ -3,9 +3,9 @@ id: maintaining-hosts
 title: Maintenance For Hosts
 ---
 
-# Deleting hosts:
+## Deleting a host manually:
 1. you might need to do this because a host exploded and you are rebuilding it, because it's the same host we need to remove any old provider ip's that point to the old host.
-## Basic Guide w/ Curl:
+### Basic Guide w/ Curl:
 1.  to find out how to replace &ltplacement-endpoint-address&gt
 ```
 openstack catalog list
@@ -22,7 +22,7 @@ curl -i -X GET http://controller:8778/resource_providers -H 'content-type: appli
 curl -i -X DELETE http://controller:8778/resource_providers/<provider_token> -H \
 'content-type: application/json' -H 'X-Auth-Token: <token>'
 ```
-## Clearing information from the database.
+### Clearing information from the database.
 select * from host_mappings;
 delete from host_mappings where id=<whatever_id>
 
@@ -30,7 +30,7 @@ SELECT id, created_at, updated_at, hypervisor_hostname FROM compute_nodes;
 
 DELETE FROM compute_node_stats WHERE id=<Whatever_id>
 
-## Better guide:
+### Better guide:
 #### Find glance url
 ```
 openstack catalog list

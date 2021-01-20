@@ -3,7 +3,12 @@ id: controller-node-playbook
 title: Playbook for Controller Nodes
 ---
 
-###### Note: This is a raw script please look at Ansible Guide Controller instead
+:::caution
+
+This is a raw script please look at the Ansible Guide to gain an overall understanding of the playbooks which affect all nodes.
+
+:::
+
 ## Controller
 https://docs.openstack.org/install-guide/openstack-services.html#minimal-deployment-for-train
 
@@ -14,8 +19,8 @@ Executing this playbook by hand is pretty simple. Follow the steps and notes as 
 Before starting this playbook, copy it to another file and change the variables inside of angled brackets <variable_name_reference> with the correct variable.
 
 While executing the playbook, don't forget to backup all the original files and copy over all the contents from the playbook onto a new file.
-# Playbook
-## Firewall
+## Playbook
+### Firewall
 sudo firewall-cmd --permanent --add-service=mysql
 sudo firewall-cmd --zone=public --permanent --add-port=4369/tcp --add-port=25672/tcp --add-port=5671-5672/tcp --add-port=15672/tcp  --add-port=61613-61614/tcp --add-port=1883/tcp --add-port=8883/tcp
 sudo firewall-cmd --new-zone=memcached --permanent

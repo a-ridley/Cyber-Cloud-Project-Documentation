@@ -21,7 +21,7 @@ module.exports = {
     Docusaurus: ['doc1', 'how-to-deploy'],
     Permissions: ['oslo-policy'],
     Diagrams: ['diagrams'],
-    Troubleshooting: ['startup-service-notes', 'network-notes', 'bug-cannot-delete-network', 'bug-could-not-kvm', 'bug-crazy-hypervisor', 'bug-not-receiving-dhcp', 'bug-rabbitmq-unreachable', 'bug-too-many-connections', 'diagnosis-tips'],
+    Troubleshooting: ['startup-service-notes', 'network-notes', 'bug-cannot-delete-network', 'bug-could-not-kvm', 'bug-crazy-hypervisor', 'bug-not-receiving-dhcp', 'bug-rabbitmq-unreachable', 'bug-too-many-connections', 'bug-db-too-many-open-files', 'diagnosis-tips'],
     Maintenance: ['dashboard-maintenance', 'active-maintenance-script', 'instance-maintenance', 'maintaining-hosts'],
     'Playbooks': [
       {

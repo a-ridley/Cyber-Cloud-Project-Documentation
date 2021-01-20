@@ -31,18 +31,18 @@ use the ip parameter to filter down to a specific machine.
 ```
 curl <logging_server>:8069/hostname?ip=10.10.1.235
 ```
-# The Client
+## The Client
 In order to configure an image to support automated hostname detection, we have created a custom OWASP BWA image called "OWASP BWA Automated", this is a snapshot, but vm instances can be created from it.
 
 Setting up the client requires modifications in 2 places
-## /script/startup.sh
+### /script/startup.sh
 this script is automatically deleted after the first boot.
 ```
 #!/bin/bash
 my_ip$(hostname -I | awk '{print $1}')
 curl 192.168.128.12:8069/hostname?ip=$my_ip -o /etc/hostname
 ```
-##  /etc/rc.local
+###  /etc/rc.local
 The rc.local file must have the following appended to it:
 ```
 FILE=/scripts/startup.sh

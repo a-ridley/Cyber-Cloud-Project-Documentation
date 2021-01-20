@@ -3,8 +3,6 @@ id: qcow2-techniques
 title: Convert Images to QCOW2
 ---
 
-
-# converting images to qcow2
 ```
 # if your images are in ova format, first extract them:
 tar -xvf librenms-centos-7.6-x86_64.ova
@@ -15,7 +13,7 @@ scp -p kali-rolling.qcow2 root@192.168.128.18:/home/temp/kali-rolling.qcow2
 
 glance image-create --progress --name "<imagename>" --file <filename> --disk-format qcow2 --container-format bare --visibility public 
 ```
-# using guestfish to modify qcow2 images
+## using guestfish to modify qcow2 images
 ```
 openssl passwd -1 root
 $1$fsEss800$XVE9wrYXvjMM4AMJjhqFh.
@@ -31,7 +29,7 @@ guestfish --rw -a /var/lib/libvirt/images/debian9-vm1.qcow2
 ><fs> quit
 
 ```
-### modifying a cloud config file
+## modifying a cloud config file
 ```
 #cloud-config
 users:

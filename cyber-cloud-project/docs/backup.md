@@ -8,7 +8,7 @@ title: Create Backup Job
 **Scope:** Add an endpoint to Veeam, place it in a protection plan and create and test a back up
 
 
-**Target:** endpoint the backup is being made form or restored to
+**Target:** Endpoint the backup is being made from or restored to
 
 **Prerequisites:** System must be supported by Veeam, job must be checked for requirements not technically supported.
 
@@ -34,7 +34,12 @@ This job is being created as a server based (Veeam Server) backup
 
 ![img](../static/img/backup-imgs/new-agent-backup-job.png)
 
-**NOTE: Example backup job is for compute5**
+
+:::note
+
+**Example backup job is for compute5**
+
+:::
 
 ![img](../static/img/backup-imgs/example-backup-compute5.png)
 
@@ -48,7 +53,12 @@ Click **Individual Computer**
 
 ![img](../static/img/backup-imgs/example-backup-individual-computer.png)
 
-***Note IP used instead of Hostname (compute5 in example) Use IP if hostname does not resolve.**
+
+:::tip
+
+** IP used instead of Hostname (compute5 in example). Use IP if hostname does not resolve.**
+
+:::
 
 ![img](../static/img/backup-imgs/example-backup-add-computer.png)
 

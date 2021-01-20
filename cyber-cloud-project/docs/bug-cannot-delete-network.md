@@ -3,12 +3,14 @@ id: bug-cannot-delete-network
 title: Cannot Delete Network
 ---
 
-# Symptoms
-- unable to delete a network because something is still attached.
-# Diagnosis:
-- TODO: more detailed steps are required to identify what is attached that is preventing deletion.
-# Solution:
-## Removing a subnet (non-sql, clears everything)
+## Symptoms
+- unable to delete a network because something is still attached. 
+
+## Diagnosis:
+- **TODO:** more detailed steps are required to identify what is attached that is preventing deletion.
+
+## Solution:
+### Removing a subnet (non-sql, clears everything)
 ```
 neutron router-gateway-clear router (check name with neutron router-list)
 neutron router-interface-delete router selfservice

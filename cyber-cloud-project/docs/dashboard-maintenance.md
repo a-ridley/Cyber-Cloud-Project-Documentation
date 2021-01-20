@@ -4,11 +4,11 @@ title: Dashboard Maintenance
 ---
 
 
-# Paths to make modifications to html
+## Paths to make modifications to html
 1. static resources go in => `/usr/share/openstack-dashboard/openstack_dashboard/static/dashboard/img/`
 2. changes to html go in => `/usr/share/openstack-dashboard/openstack_dashboard/templates/`
 
-# updating policy files correctly
+## updating policy files correctly
 
 https://docs.openstack.org/oslo.policy/latest/cli/oslopolicy-policy-generator.html
 ```
@@ -23,7 +23,7 @@ but i typed oslopolicy-policy-upgrade -h because the screenshot said to try it.
 
 oslopolicy-policy-upgrade --config-file /etc/glance/glance-api.conf --format json --namespace glance --output-file glance_policy_2.json --policy glance_policy.yaml
 ```
-# displaying panels to administrators only
+## displaying panels to administrators only
 
 1. locate the file (example):
 ```

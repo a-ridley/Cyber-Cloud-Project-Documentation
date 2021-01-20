@@ -4,10 +4,10 @@ title: Hypervisor Issues
 ---
 
 
-# Symptoms
+## Symptoms
 - unable to create multiple large images.
 - invalid information related to hypervisor details on openstack
-# Diagnosis
+## Diagnosis
 - hypervisor summary confused, Unable to create multiple instances of large images
 - finding the bug using:
 ```
@@ -18,7 +18,7 @@ tail -n 500 /var/log/nova/nova-scheduler.log | grep nova.filter
 openstack hypervisor list
 openstack hypervisor show <id>
 ```
-# Solution
+## Solution
 - This is because our hypervisor is using the wrong directory for its state.
 - create a new folder in /home called nova, the path should be /home/nova then copy all the contents over from /etc/lib/nova/ into home/nova. `cp -r /var/lib/nova/ /home/`
 - update `/etc/nova/nova.conf` in the compute node and set it's state_path variable to point to `/home/nova`
@@ -57,7 +57,7 @@ semanage fcontext -a -t nova_var_lib_t '/home/nova(/.*)?'
 
 restorecon -vvRF /home/nova/
 ```
-# Verification
+## Verification
 - view and check to see if the resources allocated to the hypervisor increased.
 ```
 openstack hypervisor show <id>

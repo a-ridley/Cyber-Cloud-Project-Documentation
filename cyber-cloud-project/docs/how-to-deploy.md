@@ -16,7 +16,10 @@ Unfortunately, it's a manual process at the moment...
 scp -P 2212 -r build/ root@10.40.216.102:/home/cyber-cloud-project-documentation/build
 ```
 
-**Note: If any changes were made to the `docker-compose.yml` file or `dockerfile` make sure to scp those over as well.**
+:::important
+
+**If any changes were made to the `docker-compose.yml` file or `dockerfile` make sure to scp those over as well.**
+:::
 
 ```bash
 scp -P 2212 docker-compose.yml root@10.40.216.102:/home/cyber-cloud-project-documentation

@@ -3,7 +3,7 @@ id: deploy-from-snapshot
 title: Deploy From Snapshot
 ---
 
-# Deploying from a snapshot:
+## Deploying from a snapshot:
 Deploying from a snapshot is simple with openstack.
 ## Creating the snapshot
 A snapshot needs to be created on the dashboard from the instances page. On this page you can select an instance and use it's context menu on the far right to "Create Snapshot".

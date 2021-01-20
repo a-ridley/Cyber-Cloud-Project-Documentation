@@ -3,9 +3,13 @@ id: compute-node-playbook
 title: Playbook for Compute Nodes
 ---
 
-###### Note: This is a raw script please look at Ansible Guide Compute instead
+:::caution
 
-# Notes
+This is a raw script please look at the Ansible Guide to gain an overall understanding of the playbooks which affect all nodes.
+
+:::
+
+## Notes
 https://docs.openstack.org/install-guide/openstack-services.html#minimal-deployment-for-train
 
 Unfortnately, it's a manual process at the moment...
@@ -16,8 +20,8 @@ Before starting this playbook, copy it to another file and change the variables 
 
 While executing the playbook, don't forget to backup all the original files and copy over all the contents from the playbook onto a new file.
 
-# Playbook
-## Packages
+## Playbook
+### Packages
 ```
 yum update -y && yum upgrade -y
 yum install centos-release-openstack-train -y
@@ -29,13 +33,13 @@ yum install ebtables -y
 yum install ipset -y
 yum install chrony -y
 ```
-## Firewall
+### Firewall
 ```
 sudo firewall-cmd --permanent --add-service=ntp
 sudo firewall-cmd --reload
 ```
-## Environment
-### sudo vi /etc/hosts
+### Environment
+#### sudo vi /etc/hosts
 ```
 10.10.10.11  compute1.usdcyber.edu    compute1
 10.10.10.12  logging.usdcyber.edu     logging
@@ -47,12 +51,12 @@ sudo firewall-cmd --reload
 10.10.10.19  compute5.usdcyber.edu    compute5
 10.10.10.26  compute4.usdcyber.edu    compute4
 ```
-### vi /etc/chrony.conf
+#### vi /etc/chrony.conf
 ```
 server controller iburst
 systemctl restart chronyd
 ```
-## Nova
+### Nova
 ### openstack
 #### vi /etc/nova/nova.conf
 [DEFAULT]
@@ -228,7 +232,7 @@ chmod 664 /etc/systemd/system/run-startup.service
 systemctl daemon-reload
 systemctl enable run-startup.service
 ```
-## RUN ON CONTROLLER NODE TO DISCOVER NEW HOSTS:
+### RUN ON CONTROLLER NODE TO DISCOVER NEW HOSTS:
 openstack compute service list --service nova-compute
 su -s /bin/sh -c "nova-manage cell_v2 discover_hosts --verbose" nova
 openstack compute service list --service nova-compute

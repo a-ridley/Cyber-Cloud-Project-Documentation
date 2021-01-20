@@ -1,12 +1,16 @@
+---
+id: bug-db-too-many-open-files
+title: Nova Too Many Open Files
+---
 
-# Diagnosis of Bug
+## Diagnosis of Bug
 Identified in the /var/log/nova/nova-api.log
 ```
 ERROR nova.api.metadata.handler DBError: (pymysql.err.InternalError) (23, u'Out of resources when opening file \'/var/tmp/#sql_aba_0.MAD\' (Errcode: 24 "Too many open files")') [SQL: u'SELECT anon_1.instances_created_at AS anon_1_instances_created_at,
 ```
 
-# Solution
-## Increase DB Open File Limits
+## Solution
+### Increase DB Open File Limits
 1. Create resources
 ```
 mkdir -p /etc/systemd/system/mariadb.service.d/

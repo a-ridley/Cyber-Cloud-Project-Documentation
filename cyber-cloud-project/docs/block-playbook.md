@@ -3,14 +3,19 @@ id: block-node-playbook
 title: Playbook for Block Nodes
 ---
 
-###### Note: This is a raw script please look at Ansible Guide Block instead
+:::caution
 
-# Notes
+This is a raw script please look at the Ansible Guide to gain an overall understanding of the playbooks which affect all nodes.
+
+:::
+
+
+## Notes
 https://docs.openstack.org/install-guide/openstack-services.html#minimal-deployment-for-train
 
 Unfortnately, it's a manual process at the moment...
-# Playbook
-## Firewall
+## Playbook
+### Firewall
 sudo firewall-cmd --add-port={3260/tcp,3260/udp} --permanent
 sudo firewall-cmd --reload
 ## Environment

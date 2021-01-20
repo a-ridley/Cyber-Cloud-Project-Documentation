@@ -28,7 +28,7 @@ Students:
   - Campos,Miguel,mcampos
 # Each line is a csv of a VM.
 Machines:
-  - <Name>,<Instances>,<Image>,<Flavor>,<Network>
-  - Test,1,CirrOS,Small,External_Network
+  - <Name>,<Instances>,<Image>,<Flavor>,<Network>,<Zone>
+  - Test,1,CirrOS,Small,External_Network,Windows
 
   ```

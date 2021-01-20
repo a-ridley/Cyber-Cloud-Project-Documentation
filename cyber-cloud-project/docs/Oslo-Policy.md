@@ -5,7 +5,14 @@ title: Oslo-Policy (Permissions)
 
 Each service in openstack has their own set of policies and they use the oslo policy engine to define policy rules. These poliices are taken straight from source code. Therefore, if there is any need to edit the default policies for each service they must be generated. 
 
-In order to generate the default policy file for *each* service you must run the following commands on the Controller node. **(Note: This only has to be done once per service)**
+In order to generate the default policy file for *each* service you must run the following commands on the Controller node.
+
+:::caution
+
+This only has to be done once per service
+:::
+
+ 
 
         cd /etc/keystone
         oslopolicy-policy-generator --namespace keystone --output-file keystone_policy.json
@@ -50,15 +57,31 @@ In order for Horizon to be able to interpret these policy files we must first en
             'network': 'neutron_policy.json'
         }
 
-If the above is not present in defaults.py add it!
+:::important
+
+If the above is not present in defaults.py. Add it!
+
+:::
+
+
+
+:::warning
+
+The generated keystone_policy.json will have a lot of rules that deal with scope. This is not the policy file we want unless your system can handle scope. If not, please look for the deprecated keystone_policy file with simpler rules. more info here: 
+
+:::
+
+:::note
+
+You may find a more detailed explanation on this reddit post about why we are doing this to generate policy files and if we are lucky someone has contributed what they know.
+
+[Admin User Cannot See Users Project or Roles Tab on Horizon](https://www.reddit.com/r/openstack/comments/ibtmwo/admin_user_cannot_see_users_project_or_roles_tab/)
+
+:::
 
 Sources: [Horizon Policy Enforcement (RBAC: Role Based Access Control)](https://docs.openstack.org/horizon/latest/contributor/topics/policy.html)
 
 
-###NOTE: The generated keystone_policy.json will have a lot of rules that deal with scope. This is not the policy file we want unless your system can handle scope. If not, please look for the depcracted keystone_policy file with simpler rules. more info here: 
-
-https://www.reddit.com/r/openstack/comments/ibtmwo/admin_user_cannot_see_users_project_or_roles_tab/
 
 
-
-This is a link to [another document.](openstack-tutorial.md) This is a link to an [external page.](http://www.example.com/)
+This is a link to [Ask Openstack](https://ask.openstack.org/en/questions/)
