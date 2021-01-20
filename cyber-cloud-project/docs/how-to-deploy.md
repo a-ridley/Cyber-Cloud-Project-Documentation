@@ -10,7 +10,7 @@ Unfortunately, it's a manual process at the moment...
 3. Go to your VS Code terminal and run `npm run build` *(this will create a build folder in your working directory)*
 4. If it built successfully, push your local changes to the github repository.
 5. Next, SSH into the logging node and go to the `/home/cyber-cloud-project-documentation` directory and remove `/build` folder. This ensures we don't have any old files left over when we copy over the new build folder.
-6. Scp the `/build` folder to the logging node:
+6. Open a new terminal on your personal laptop and navigate to your working directory and then Scp the `/build` folder to the logging node:
 
 ```bash
 scp -P 2212 -r build/ root@10.40.216.102:/home/cyber-cloud-project-documentation/build
