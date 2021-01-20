@@ -2,6 +2,9 @@
 id: block-node-playbook
 title: Playbook for Block Nodes
 ---
+
+###### Note: This is a raw script please look at Ansible Guide Block instead
+
 # Notes
 https://docs.openstack.org/install-guide/openstack-services.html#minimal-deployment-for-train
 

@@ -2,7 +2,9 @@
 id: controller-node-playbook
 title: Playbook for Controller Nodes
 ---
-# Notes
+
+###### Note: This is a raw script please look at Ansible Guide Controller instead
+## Controller
 https://docs.openstack.org/install-guide/openstack-services.html#minimal-deployment-for-train
 
 Unfortnately, it's a manual process at the moment...

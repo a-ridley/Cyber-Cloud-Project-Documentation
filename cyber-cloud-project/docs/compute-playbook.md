@@ -2,6 +2,9 @@
 id: compute-node-playbook
 title: Playbook for Compute Nodes
 ---
+
+###### Note: This is a raw script please look at Ansible Guide Compute instead
+
 # Notes
 https://docs.openstack.org/install-guide/openstack-services.html#minimal-deployment-for-train
 
