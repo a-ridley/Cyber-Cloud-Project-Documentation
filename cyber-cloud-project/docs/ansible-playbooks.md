@@ -16,6 +16,16 @@ The primary objective of the ansible playbooks is to convert all our existing ma
     - group_vars/: a folder which contains secrets for building our openstack platform. **This file is not provided by default; a proper cluster will not be built without this file**
 3. Run `make ping` to verify that you can connect to all the hosts.
 4. Verify your settings in the `group_vars/` folder.
+
+:::important
+
+
+Server kernel's should be manually upgraded prior to execution of step 5 using the following command: 
+
+`yum update -y && yum upgrade -y`
+
+:::
+
 5. Run `make cluster` (without specifying the inventory file, the make cluster command will build using the test inventory file.)
 7. Connect to the dashboard using the information provided at the end of the make script (if you closed the ansible-playbook process detailed logs of the last attempt are kept in the `.logs/` folder)
 8. Optionally: verify your installation by running the test scripts found in the playbooks: `/home/playbooks/roles/controller/files/tests`
@@ -30,6 +40,13 @@ Example commands and their effects.
 3. `make ping` - checks all hosts to see if they are pingable.
 4. `make startup` - runs the startup.sh script across all hosts.
 5. `make scripts` - deploys custom scripts such as the classroom builder onto the host.
+
+:::warning
+
+In order to properly teardown block you need to manually wipe the drives before proceeding.
+
+:::
+
 6. `make teardown` - **destroys the current envrionment and resets it**.
 7. `make logging` - deploys custom logging services onto the logging server, compute, and controller.
 #### Variables
